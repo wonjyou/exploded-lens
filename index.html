@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Optik 50 — Exploded</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <svg id="leaders" aria-hidden="true"></svg>
+  <div id="labels" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <span class="brand">Optik<em>50</em></span>
+    <span class="count"><span id="revealed">00</span> / <span id="total">00</span> parts</span>
+  </header>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+
+  <main>
+    <section class="panel">
+      <p class="kicker">Anatomy of a lens</p>
+      <h1>Every part,<br /><em>in its place.</em></h1>
+      <p class="lede">A 50mm f/1.4 prime, built from glass, brass and aluminium. Scroll to take it apart.</p>
+    </section>
+
+    <section class="panel">
+      <p class="kicker">01 — The shell</p>
+      <h2>Outer housing</h2>
+      <p>The filter ring and front element lift away first, followed by the bayonet mount that locks the lens to the camera body.</p>
+    </section>
+
+    <section class="panel">
+      <p class="kicker">02 — The light path</p>
+      <h2>Glass elements</h2>
+      <p>Coated optical elements bend incoming light onto the sensor. The meniscus and doublet correct for distortion and colour fringing.</p>
+    </section>
+
+    <section class="panel">
+      <p class="kicker">03 — The iris</p>
+      <h2>Aperture</h2>
+      <p>Nine curved blades overlap to form a near-circular opening, giving soft, rounded highlights when shooting wide open.</p>
+    </section>
+
+    <section class="panel">
+      <p class="kicker">04 — Fully exploded</p>
+      <h2>Nine assemblies</h2>
+      <p>Scroll back up to put it all back together.</p>
+      <button class="again" id="again" type="button">Reassemble ↑</button>
+    </section>
+  </main>
+
+  <div class="hint" id="hint">Scroll</div>
+  <div class="loader" id="loader">Assembling…</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
